@@ -1,6 +1,8 @@
 # Nihongo-to-Memrise
 Convert the Nihongo app's '.tsv' files to something that Memrise can read and import, so you can quickly make your own courses/decks on Memrise.
 
+Video Tutorial: https://www.youtube.com/watch?v=X7y-V_CdCgI
+
 Part One:
 1. Download the 'Nihongo' Dictionary app on your iPhone or iPad.
 2. Start the free-trial or subscribe to the monthly plan in the app.
