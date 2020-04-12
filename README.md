@@ -18,7 +18,7 @@ Part Two:
 4. If Windows, press the windows key and type 'command prompt' and press enter. MacOS, hit command+space and type 'terminal' and hit enter.
 5. Once your terminal is open, type 'cd Desktop'
 6. Then type 'python Nihongo_to_Memrise.py ENTER_NAME_OF_FILE.tsv'
-  - Note that on Windows, the Japanese characters my not display in the terminal, but don't worry about that, they're all still there.
+  - Note that on Windows, the Japanese characters may not display in the terminal, but don't worry about that, they're all still there.
 7. Copy the output. 
 8. Create a course on Memrise
 9. Once you are adding words, click advanced, and 'bulk add words'.
