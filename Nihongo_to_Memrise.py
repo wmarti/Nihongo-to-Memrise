@@ -94,6 +94,9 @@ file1 = sys.argv[1]
 with open(file1, encoding='utf-8') as fh:
     x = fh.readlines()
 # print("printing line by line....")
+name = str(file1).replace(".tsv", ".txt")
+output = open(name, 'w', encoding='utf-8')
+
 for l in range(len(x)):
     
     line = x[l].replace(",", ";").replace("<ruby style=\"-webkit-ruby-position: before;\">", "") 
@@ -121,8 +124,10 @@ for l in range(len(x)):
         super_special(line)
 
     reformat(line)
-     
-    print(line)
+    #print(line)
+    output.write("".join(line))
+
+print("The file has been converted and output to: "+name)
 
 
 
