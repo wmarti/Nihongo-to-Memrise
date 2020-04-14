@@ -18,7 +18,6 @@ def add_kana_to_kanji(x):
             for i in range(len(subdivide[1])-1):
                 for y in kanaCharacters:
                     if subdivide[1][i] == y:
-                        kana_char = y
                         extra_chars += y
                         subdivide[1] = subdivide[1].replace(y, " ")
             line=subdivide[0]+extra_chars+','+subdivide[1]
@@ -45,7 +44,7 @@ def no_kanji(x):
     for x in divide[0]:
         if (19968<=ord(x)<=40879): #if a kanji
             counter+=1
-    if (',' and '<br>' not in line and list_line[0] in kanaCharacters and len(divide)==2 and counter==0):
+    if (counter==0):
         line = ','+ divide[0] + ',' + divide[1]
 
 def br_case(x): #case in which there is a <br> in the line
@@ -76,8 +75,7 @@ def super_special(x):
     for n in line:
         if n in kanaCharacters:
             kana_reading+=n
-    reading = ''   
-    kana_chars = ''
+
     lst_of_chars = [i for i in lst[-1][1] if i not in kanaCharacters]
     str1 = ''.join(lst_of_chars)
     str1 = str1.replace("\t", "")
@@ -118,16 +116,14 @@ for l in range(len(x)):
         #another special case 取り,とり, 組り,く, multiple replaces happened so it breaks the word...
     
     else:
+        """This is a very special horrible case in which there's Kanji, kana, kanji, kana, etc...
+        i.e. 取り組み"""
         super_special(line)
 
     reformat(line)
      
     print(line)
 
-# save_path= '~/Desktop'
-# stringTosave = (line)
-# completed = os.path.join(save_path, word_list+'.txt')
-# file1 = open(completed, "w")
 
 
 
